@@ -5,31 +5,7 @@
 #include <string.h>
 
 
-void generateRandomOutput(char* output);
-
-
-int main(int argc, char* argv[]){
-	printf("genSensorData\n");
-
-    char c;
-   /* while(read(0, &c,1) == 1){
-
-        if(75 == c){
-            write(1,&c,1);
-        }
-
-    }*/
-
-    char buffer[256];
-    generateRandomOutput(buffer);
-
-    write(1,buffer,strlen(buffer));
-
-   return 0;
-}
-
-void generateRandomOutput(char* output){
-    srand(time(0));
+void generateOkOutput(char* okOutput){
     int sensorId = rand()%3;
 
     char* sensorNames[] = {"heatSensor", "moveSensor", "lightSensor"};
@@ -45,6 +21,47 @@ void generateRandomOutput(char* output){
     int meanValue = (a+b)/2;
     int maxValue = a < b ? b : a;
 
-    sprintf(output, " sensorId is:%d; sensorName is:%s; minvalue is:%d; meanValue is:%d; maxValue is:%d; \n",
+    sprintf(okOutput, " sensorId is:%d; sensorName is: '%s'; minvalue is:%d; meanValue is:%d; maxValue is:%d; \n",
      sensorId, sensorName, minValue, meanValue, maxValue);
+}
+
+
+void generateErrorOutput(char* errorOutput){
+
+    int sensorId = rand()%3;
+    int errorCode = rand()%600; 
+
+	char* errorDetails[] = {"You break everything", "RTFM !", "You shouldn't practice C, go for python noob."};
+    char* errorDetail = errorDetails[rand()%3];
+
+    sprintf(errorOutput, " sensorId is:%d; errorCode is: %d; errorDetails is: '%s'; \n",
+     sensorId,errorCode,errorDetail);
+
+}
+
+
+int main(int argc, char* argv[]){
+    srand(time(0));
+
+
+	printf("genSensorData\n");
+
+    char c;
+    while(read(0, &c,1) == 1){
+
+        if(c == 'K'){
+			char okBuffer[256];
+			generateOkOutput(okBuffer);
+		    write(1, okBuffer, strlen(okBuffer) );
+		}else if (c == 'E'){
+			char errorBuffer[256];
+    		generateErrorOutput(errorBuffer);
+		    write(2, errorBuffer,strlen(errorBuffer) );
+		}
+		
+
+    }
+
+
+   return 0;
 }
