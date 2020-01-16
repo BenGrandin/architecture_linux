@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #Forcing the use of 3 parameters
-if [ "$USER" == 'duhalgouetmelec' ]; then
+if [ "$USER" == 'grandinbenjamin' ]; then
   echo "Bienvenue $USER"
   if [ "$#" -eq "0" ]; then
     echo "No argument supplied, need 3"
