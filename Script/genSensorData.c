@@ -21,8 +21,8 @@ void generateOkOutput(char* okOutput){
     int meanValue = (a+b)/2;
     int maxValue = a < b ? b : a;
 
-    sprintf(okOutput, " sensorId is:%d; sensorName is: '%s'; minvalue is:%d; meanValue is:%d; maxValue is:%d; \n",
-     sensorId, sensorName, minValue, meanValue, maxValue);
+    sprintf(okOutput, " sensorId is:%d; sensorName is: '%s'; value is:%d minvalue is:%d; meanValue is:%d; maxValue is:%d; \n",
+     sensorId, sensorName, value, minValue, meanValue, maxValue);
 }
 
 

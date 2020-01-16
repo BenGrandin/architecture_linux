@@ -1,3 +1,1 @@
- sensorId is:0; errorCode is: 127; errorDetails is: 'You shouldn't practice C, go for python noob.'; 
- sensorId is:2; errorCode is: 47; errorDetails is: 'RTFM !'; 
- sensorId is:2; errorCode is: 595; errorDetails is: 'RTFM !'; 
+ sensorId is:1; errorCode is: 191; errorDetails is: 'RTFM !'; 
