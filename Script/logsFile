@@ -1,6 +1,0 @@
- sensorId is:2; sensorName is: 'lightSensor'; minvalue is:14; meanValue is:45; maxValue is:76; 
- sensorId is:1; sensorName is: 'moveSensor'; minvalue is:64; meanValue is:74; maxValue is:84; 
- sensorId is:0; sensorName is: 'heatSensor'; minvalue is:48; meanValue is:68; maxValue is:88; 
- sensorId is:2; sensorName is: 'lightSensor'; minvalue is:3; meanValue is:11; maxValue is:20; 
- sensorId is:2; sensorName is: 'lightSensor'; minvalue is:10; meanValue is:41; maxValue is:73; 
- sensorId is:1; sensorName is: 'moveSensor'; minvalue is:1; meanValue is:21; maxValue is:41; 
